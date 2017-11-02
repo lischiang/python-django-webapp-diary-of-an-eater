@@ -1,0 +1,10 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+	{% for dish in object_list %}
+		<h5>{{dish.date|date:"Y-m-d"}}: <a href=
+		"/dishes/{{dish.id}}"> {{dish.name}}</a> at {{dish.place}}</h5>
+	{% endfor %}
+	<a href="{% url 'dish_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+	<!-- <a href="/dishes/add/"><button type="button" class="btn btn-default">Add New Dish</button></a> -->
+{% endblock %}

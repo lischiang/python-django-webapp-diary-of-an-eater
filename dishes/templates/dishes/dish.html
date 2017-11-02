@@ -1,0 +1,25 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<div>
+	<h2>{{dish.name}}</h2>
+	<h6>Eaten on {{dish.date}} at {{dish.place}}</h6>
+</div>
+<div style="margin-top: 30px">
+	<h4>Description</h4>
+	{{dish.description|safe|linebreaks}}
+</div>
+<div style="margin-top: 30px">
+	<p>
+		<b>Price</b>: $ {{dish.price}}
+	</p>
+	<p>
+		<b>Rating</b>: {{dish.rating}}
+	</p>
+</div>	
+<a href="{% url 'dishes' %}">
+	<button type="submit" class="save btn btn-default">
+		<span class="glyphicon glyphicon-arrow-left"> Back</span>
+	</button>
+</a>
+{% endblock %}
