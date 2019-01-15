@@ -5,4 +5,4 @@ def index(request):
 
 def contact(request):
     return render(request, 'personal/basic.html',
-                  {'content':['If you would like to contact me:','lisa.chiang.sv@gmail.com']})
+                  {'content':['My name is','Lisa Chiang']})
