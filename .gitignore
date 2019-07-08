@@ -1,3 +1,9 @@
+# Python environment folder
+ENV/
+
+# VS code folder
+.vscode/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
